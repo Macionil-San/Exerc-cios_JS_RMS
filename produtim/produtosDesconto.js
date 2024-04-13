@@ -23,3 +23,5 @@
 //saída de dados
 // = mostrar a saída dos produtos que ela escolher e a quantidade e o preço de cada produto
 // = mostrar também o desconto de cada produto
+
+

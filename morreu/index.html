@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ruan Macionil">
+    <title>Morreu mas passa bem</title>
+</head>
+
+<body>
+    
+</body>
+<script>
+
+
+// taxa de natalidade = n de nas . 1000/ n de habi
+// taxa de morlidade = n de obitos . 1000/ n de habi                
+// toFixed =  faz formatar um número com uma quantidade específica de casas decimais. 
+
+
+
+
+function calcularN(numCriancasNascidas, numHabitantes) {
+    return (numCriancasNascidas * 1000) / numHabitantes;
+}
+
+
+function calcularMortalidade(numObitos, numHabitantes) {
+    return (numObitos * 1000) / numHabitantes;
+}
+
+
+function calcularTaxas() {
+    let escolha = prompt("Digite '1' para calcular a taxa de natalidade ou '2' para calcular a taxa de mortalidade:");
+
+    switch (escolha) {
+        case '1':
+            let numCriancasNascidas = parseInt(prompt("Digite o número de crianças nascidas:"));
+            let numHabitantesNatalidade = parseInt(prompt("Digite o número total de habitantes:"));
+            let taxaNatalidade = calcularN(numCriancasNascidas, numHabitantesNatalidade);
+            alert ("A taxa de natalidade é: " + taxaNatalidade.toFixed(2));
+            break;
+        case '2':
+            let numObitos = parseInt(prompt("Digite o número de óbitos:"));
+            let numHabitantesMortalidade = parseInt(prompt("Digite o número total de habitantes:"));
+            let taxaMortalidade = calcularMortalidade(numObitos, numHabitantesMortalidade);
+            alert ("A taxa de mortalidade é: " + taxaMortalidade.toFixed(2));
+            break;
+        default:
+            console.log("Opção inválida.");
+    }
+}
+
+
+calcularTaxas();
+
+</script>
+
+</body>
+
+</html>

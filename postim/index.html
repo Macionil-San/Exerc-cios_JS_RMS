@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ruan Macionil">
+    <title>Gasolina ta cara</title>
+</head>
+
+<body>
+    
+    
+
+    
+
+<script>
+
+// litro do álcool é R$ 4,90.
+// litro da gasolina é R$ 5,30
+// toFixed =  faz formatar um número com uma quantidade específica de casas decimais. 
+
+
+
+
+        let tipoCombustivel = prompt("digite 'A' para alcool ou 'G' para gasolina: ");
+    let litros = parseFloat(prompt("quantidade de litros: "));
+
+
+    let precoAlcool = 4.90;
+    let precoGasolina = 5.30;
+     let desconto = 0;
+    let valorTotal = 0;
+
+switch (tipoCombustivel.toUpperCase()) {
+
+    case 'A':
+    if (litros <= 20) {
+      desconto = 0.03;
+    } else {
+      desconto = 0.05;
+    } 
+
+    
+    valorTotal = litros * precoAlcool * (1 - desconto);
+    
+    alert ("Valor a ser pago: R$ " + valorTotal.toFixed(2) + ". Desconto: " + (desconto * 100) + "%");
+    break;
+  case 'G':
+    if (litros <= 20) {
+      desconto = 0.04;
+    } else {
+      desconto = 0.06;
+    }
+    valorTotal = litros * precoGasolina * (1 - desconto);
+    alert ("Valor a ser pago: R$ " + valorTotal.toFixed(2) + ". Desconto: " + (desconto * 100) + "%");
+    break;
+  default:
+    console.log("Tipo de combustível inválido!");
+}
+
+</script>
+
+</body>

@@ -1,0 +1,49 @@
+<!-- // Desenvolva um programa que recebe do usuário, o placar de um jogo de futebol (os gols de cada time) e informa se o resultado foi um empate, se a vitória foi do primeiro time ou do segundo time.
+
+
+//entrada de dados
+// = informar os dois times de futebol
+// = informar o placar do jogo
+
+
+//processamento
+// = realizar a validação através das estruturas condicionais
+// = verificar se os times ganharam, perderam ou empataram
+
+//saida
+// = informar o resultado do jogo de futebol -->
+
+
+
+<!DOCTYPE html>
+<html lang="pt- BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ruan Macionil">
+    <title>Fla X Cor</title>
+</head>
+<body>
+    
+    <script>
+
+         let golsTime1 = parseInt(prompt("Digite a quantidade de gols do Flamengo:"));
+let golsTime2 = parseInt(prompt("Digite a quantidade de gols do Corinthians:"));
+
+function Resultado(golsTime1, golsTime2) {
+    if (golsTime1 === golsTime2) {
+        alert ("Empate");
+    } else if (golsTime1 > golsTime2) {
+        alert ("Vitória do Flamengo");
+    } else {
+        alert ("Vitória do Corinthians");
+    }
+}
+
+let resultado = Resultado(golsTime1, golsTime2);
+console.log(`O resultado do jogo foi: ${resultado}`);
+
+    </script>
+
+</body>
+</html>
